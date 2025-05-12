@@ -1,0 +1,234 @@
+/* Общие настройки */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f6f9;
+  color: #333;
+}
+
+h1, h2, h3 {
+  color: #1a3e72;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+/* Header */
+header {
+  background: linear-gradient(to right, #2980b9, #6dd5fa);
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Разделы */
+main section {
+  margin-bottom: 60px;
+}
+
+.section-description {
+  font-size: 1.1em;
+  margin-bottom: 30px;
+  color: #555;
+}
+
+/* Venn Diagram */
+.venn-diagram {
+  position: relative;
+  width: 100%;
+  height: 380px;
+  margin-top: 30px;
+}
+
+.circle {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: rgba(70, 130, 180, 0.5);
+  color: white;
+  backdrop-filter: blur(3px);
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+.circle.left {
+  left: 15%;
+  top: 30px;
+  background-color: rgba(255, 99, 132, 0.6);
+}
+
+.circle.right {
+  right: 15%;
+  top: 30px;
+  background-color: rgba(54, 162, 235, 0.6);
+}
+
+.circle.overlap {
+  left: 35%;
+  top: 60px;
+  z-index: 2;
+  background-color: rgba(255, 206, 86, 0.7);
+  border: 2px solid white;
+}
+
+.circle h3 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.circle ul {
+  list-style: disc inside;
+  padding: 0;
+  font-size: 0.95em;
+}
+
+/* Highlight Text */
+.highlight-text {
+  margin-top: 20px;
+  font-style: italic;
+  color: #2c3e50;
+  font-weight: 500;
+  text-align: center;
+}
+
+/* Responsive Image */
+.responsive-img {
+  width: 100%;
+  max-width: 700px;
+  display: block;
+  margin: 30px auto 0;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+
+/* Document Cards */
+.documents {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.document-card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 20px;
+  flex: 1 1 300px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.document-card:hover {
+  transform: translateY(-5px);
+}
+
+.document-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+/* Comparison Box */
+.comparison-box {
+  margin-top: 40px;
+  background: #eef3f7;
+  border-left: 6px solid #1a3e72;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* Footer */
+footer {
+  background-color: #1a3e72;
+  color: white;
+  text-align: center;
+  padding: 20px 10px;
+}
+
+/* Animations */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .circle {
+    width: 200px;
+    height: 200px;
+    font-size: 0.85em;
+  }
+
+  .circle.left {
+    left: 5%;
+  }
+
+  .circle.right {
+    right: 5%;
+  }
+
+  .circle.overlap {
+    left: 25%;
+  }
+
+  .venn-diagram {
+    height: 300px;
+  }
+}
+
+.ppt-section {
+  padding: 60px 20px;
+  background: #f9f9f9;
+}
+
+.ppt-section h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+  color: #003366;
+}
+
+.ppt-section .section-description {
+  text-align: center;
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  color: #555;
+}
+
+.ppt-wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+  overflow: hidden;
+  background: white;
+}
+
+.ppt-wrapper iframe {
+  width: 100%;
+  height: 700px;
+  border: none;
+  display: block;
+  border-radius: 12px;
+}
+
+/* Optional: better on mobile */
+@media (max-width: 768px) {
+  .ppt-wrapper iframe {
+    height: 500px;
+  }
+}
